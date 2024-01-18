@@ -54,11 +54,11 @@ return {
     name = "catppuccin",
     lazy = false,
     priority = 1000,
-    config = function()
-      require("catppuccin").setup({
-        transparent_background = true,
-      })
-    end,
+    -- config = function()
+    --   require("catppuccin").setup({
+    --     transparent_background = true,
+    --   })
+    -- end,
   },
   {
     "antonyz89/electron-vue.nvim",
@@ -66,6 +66,11 @@ return {
   },
   {
     "sainnhe/sonokai",
+    -- config = function()
+    --   require("sonokai").setup({
+    --     style = "atlantis",
+    --   })
+    -- end,
   },
   {
     "sainnhe/edge",
@@ -131,6 +136,13 @@ return {
     end,
   },
   { "Mofiqul/vscode.nvim" },
+  {
+    "askfiy/visual_studio_code",
+    priority = 100,
+    config = function()
+      -- vim.cmd([[colorscheme visual_studio_code]])
+    end,
+  },
   { "Mofiqul/adwaita.nvim" },
   {
     "nyoom-engineering/oxocarbon.nvim",
@@ -149,24 +161,29 @@ return {
     -- },
   },
   -- { "flazz/vim-colorschemes" },
-  {
-    "olimorris/onedarkpro.nvim",
-  },
+  -- {
+  --   "olimorris/onedarkpro.nvim",
+  -- },
 
   -- WHICH ONEDARK DO I USE???
-  -- {
-  --   "navarasu/onedark.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require("onedark").setup({
-  --       style = "darker",
-  --     })
-  --   end,
-  -- },
-  { "sonph/onehalf" },
+  {
+    "navarasu/onedark.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("onedark").setup({
+        -- style = "deep",
+        -- style = "cool",
+        -- style = "warm",
+        style = "dark",
+        -- style = "darker",
+        -- style = "warmer",
+      })
+    end,
+  },
+  -- { "sonph/onehalf" },
   { "tyrannicaltoucan/vim-deep-space" },
-  { "rakr/vim-one" },
+  -- { "rakr/vim-one" },
   { "NTBBloodbath/doom-one.nvim" },
   { "sainnhe/everforest" },
   { "wuelnerdotexe/vim-enfocado" },
@@ -204,7 +221,7 @@ return {
     },
   },
   { "liuchengxu/space-vim-dark" },
-  -- { "RRethy/nvim-base16" },
+  { "RRethy/nvim-base16" },
   { "frenzyexists/aquarium-vim" },
   { "Everblush/nvim" },
   { "nvimdev/zephyr-nvim" },
@@ -234,13 +251,18 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "monokai-pro-octagon",
+      -- colorscheme = "monokai-pro-spectrum",
       -- colorscheme = "base16-tokyo-night-terminal-storm",
       -- colorscheme = "nord",
       -- colorscheme = "vscode",
-      -- colorscheme = "everforest",
-      colorscheme = "tokyonight",
+      colorscheme = "everforest",
+      -- colorscheme = "tokyonight",
+      -- colorscheme = "sonokai",
       -- colorscheme = "vscode_modern",
       -- colorscheme = "edge",
+      -- colorscheme = "kanagawa",
+      -- colorscheme = "visual_studio_code",
+      -- colorscheme = "onedark",
     },
   },
 }
