@@ -1,7 +1,9 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 -- experimental neovide config
--- hologram.lua setup
+require("hologram").setup({
+  auto_display = true, -- WIP automatic markdown image display, may be prone to breaking
+})
 if vim.g.neovide then
   -- scale factor
   vim.g.neovide_scale_factor = 0.8
