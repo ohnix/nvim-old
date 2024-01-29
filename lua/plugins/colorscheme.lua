@@ -112,6 +112,24 @@ return {
   },
   { "projekt0n/caret.nvim" },
   { "JoosepAlviste/palenightfall.nvim" },
+  { "drewtempelmeyer/palenight.vim" },
+  { "sekke276/dark_flat.nvim" },
+  {
+    "rockyzhang24/arctic.nvim",
+    dependencies = { "rktjmp/lush.nvim" },
+    name = "arctic",
+    branch = "main",
+    priority = 1000,
+    config = function()
+      -- vim.cmd("colorscheme arctic")
+    end,
+  },
+  {
+    "nyngwang/nvimgelion",
+    config = function()
+      -- do whatever you want for further customization~
+    end,
+  },
   {
     "rebelot/kanagawa.nvim",
     config = function()
@@ -151,32 +169,88 @@ return {
     -- },
   },
   -- { "flazz/vim-colorschemes" },
-  -- {
-  --   "olimorris/onedarkpro.nvim",
-  -- },
+  { "olimorris/onedarkpro.nvim" },
 
   -- WHICH ONEDARK DO I USE???
-  {
-    "navarasu/onedark.nvim",
-    lazy = false,
-    config = function()
-      require("onedark").setup({
-        -- style = "deep",
-        -- style = "cool",
-        -- style = "warm",
-        style = "dark",
-        -- style = "darker",
-        -- style = "warmer",
-      })
-    end,
-  },
+  -- {
+  --   "navarasu/onedark.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("onedark").setup({
+  --       -- style = "deep",
+  --       -- style = "cool",
+  --       -- style = "warm",
+  --       style = "dark",
+  --       -- style = "darker",
+  --       -- style = "warmer",
+  --     })
+  --   end,
+  -- },
   -- { "sonph/onehalf" },
   { "tyrannicaltoucan/vim-deep-space" },
   -- { "rakr/vim-one" },
+  { "mellow-theme/mellow.nvim" },
   { "NTBBloodbath/doom-one.nvim" },
+  { "nxvu699134/vn-night.nvim" },
   { "sainnhe/everforest" },
+  { "lewpoly/sherbet.nvim" },
   { "wuelnerdotexe/vim-enfocado" },
   { "yashguptaz/calvera-dark.nvim" },
+  -- {
+  --   "linrongbin16/colorbox.nvim",
+  --   -- don't lazy load
+  --   lazy = false,
+  --   -- load with highest priority
+  --   priority = 1000,
+  --   -- required by 'mcchrish/zenbones.nvim'
+  --   dependencies = "rktjmp/lush.nvim",
+  --   build = function()
+  --     require("colorbox").update()
+  --   end,
+  --   config = function()
+  --     require("colorbox").setup({})
+  --   end,
+  -- },
+  -- {
+  --   "themercorp/themer.lua",
+  --   config = function()
+  --     require("themer").setup({
+  --       colorscheme = "rose_pine",
+  --     })
+  --   end,
+  -- },
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("cyberdream").setup({
+        -- Recommended - see "Configuring" below for more config options
+        transparent = true,
+        italic_comments = true,
+        hide_fillchars = true,
+        borderless_telescope = true,
+      })
+    end,
+  },
+  {
+    "ramojus/mellifluous.nvim",
+    config = function()
+      require("mellifluous").setup({ --[[...]]
+        -- color_set = "mellifluous",
+        -- color_set = "alduin",
+        -- color_set = "mountain",
+        color_set = "tender",
+
+        flat_background = {
+          line_numbers = true,
+          floating_windows = true,
+          file_tree = true,
+          cursor_line_number = false,
+        },
+      }) -- optional, see configuration section.
+    end,
+  },
   {
     "ribru17/bamboo.nvim",
     lazy = false,
@@ -240,7 +314,7 @@ return {
   -- "glepnir/zephyr-nvim",
   -- requires = { "nvim-treesitter/nvim-treesitter", opt = true },
   -- },
-  { "projekt0n/github-nvim-theme" },
+  -- { "projekt0n/github-nvim-theme" },
   {
     "EdenEast/nightfox.nvim",
     config = function()
@@ -283,7 +357,8 @@ return {
       -- colorscheme = "fleet",
       -- colorscheme = "nordic",
       -- colorscheme = "gruvbox-material",
-      colorscheme = "ayu-mirage",
+      -- colorscheme = "ayu-mirage",
+      -- colorscheme = "arctic",
       -- colorscheme = "everforest",
       -- colorscheme = "zephyr",
       -- colorscheme = "citruszest",
