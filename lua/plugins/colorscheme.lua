@@ -17,7 +17,6 @@ return {
   {
     "uloco/bluloco.nvim",
     lazy = false,
-    priority = 1000,
     dependencies = { "rktjmp/lush.nvim" },
     config = function()
       -- your optional config goes here, see below.
@@ -29,12 +28,10 @@ return {
   { "voidekh/kyotonight.vim" },
   { "dasupradyumna/midnight.nvim", lazy = false, priority = 1000 },
   { "ellisonleao/gruvbox.nvim" },
-  { "rafamadriz/neon" },
   { "tomasiser/vim-code-dark" },
   {
     "HoNamDuong/hybrid.nvim",
     lazy = false,
-    priority = 1000,
     opts = {},
   },
   {
@@ -48,18 +45,17 @@ return {
     end,
   },
   { "shaunsingh/nord.nvim" },
-  { "Yagua/nebulous.nvim" },
   {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy = false,
-    priority = 1000,
     -- config = function()
     --   require("catppuccin").setup({
     --     transparent_background = true,
     --   })
     -- end,
   },
+  { "Yazeed1s/minimal.nvim" },
   {
     "antonyz89/electron-vue.nvim",
     dependencies = { "rktjmp/lush.nvim" },
@@ -72,15 +68,12 @@ return {
     --   })
     -- end,
   },
-  {
-    "sainnhe/edge",
-  },
+  { "sainnhe/edge" },
   { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
   {
     "olivercederborg/poimandres.nvim",
     lazy = false,
-    priority = 1000,
     config = function()
       require("poimandres").setup({
         -- leave this setup function empty for default config
@@ -90,22 +83,24 @@ return {
     end,
   },
   {
+    "zootedb0t/citruszest.nvim",
+    lazy = false,
+  },
+  { "cpea2506/one_monokai.nvim" },
+  { "shaunsingh/moonlight.nvim" },
+  {
     "maxmx03/fluoromachine.nvim",
     -- config = function()
     --   local fm = require("fluoromachine")
-    --
-    --   fm.setup({
-    --     glow = true,
-    --     theme = "fluoromachine",
-    --   })
-    --
-    --   vim.cmd.colorscheme("fluoromachine")
+
+    -- fm.setup({
+    --   glow = true,
+    -- theme = "fluoromachine",
+    -- })
+
+    -- vim.cmd.colorscheme("fluoromachine")
     -- end,
   },
-  {
-    "kyazdani42/blue-moon",
-  },
-
   { "dracula/vim" },
   { "luisiacc/gruvbox-baby" },
   {
@@ -115,9 +110,8 @@ return {
     -- In Vim, compat mode is turned on as Lush only works in Neovim.
     requires = "rktjmp/lush.nvim",
   },
-  {
-    "JoosepAlviste/palenightfall.nvim",
-  },
+  { "projekt0n/caret.nvim" },
+  { "JoosepAlviste/palenightfall.nvim" },
   {
     "rebelot/kanagawa.nvim",
     config = function()
@@ -138,20 +132,16 @@ return {
   { "Mofiqul/vscode.nvim" },
   {
     "askfiy/visual_studio_code",
-    priority = 100,
     config = function()
       -- vim.cmd([[colorscheme visual_studio_code]])
     end,
   },
   { "Mofiqul/adwaita.nvim" },
-  {
-    "nyoom-engineering/oxocarbon.nvim",
-  },
+  { "nyoom-engineering/oxocarbon.nvim" },
   { "marko-cerovac/material.nvim" },
   {
     "folke/tokyonight.nvim",
     lazy = false,
-    priority = 1000,
     -- opts = {
     --   transparent = true,
     --   styles = {
@@ -169,7 +159,6 @@ return {
   {
     "navarasu/onedark.nvim",
     lazy = false,
-    priority = 1000,
     config = function()
       require("onedark").setup({
         -- style = "deep",
@@ -191,7 +180,6 @@ return {
   {
     "ribru17/bamboo.nvim",
     lazy = false,
-    priority = 1000,
     config = function()
       require("bamboo").setup({
         -- optional configuration here
@@ -202,7 +190,6 @@ return {
   {
     "gmr458/vscode_modern_theme.nvim",
     lazy = false,
-    priority = 1000,
     config = function()
       require("vscode_modern").setup({
         cursorline = true,
@@ -221,10 +208,38 @@ return {
     },
   },
   { "liuchengxu/space-vim-dark" },
-  { "RRethy/nvim-base16" },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    opts = {},
+  },
+  -- { "RRethy/nvim-base16" },
   { "frenzyexists/aquarium-vim" },
+  {
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+    {
+      "baliestri/aura-theme",
+      lazy = false,
+      config = function(plugin)
+        vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
+        -- vim.cmd([[colorscheme aura-dark]])
+      end,
+    },
+  },
+  { "Shatur/neovim-ayu" },
+  {
+    "xero/miasma.nvim",
+    lazy = false,
+    config = function()
+      -- vim.cmd("colorscheme miasma")
+    end,
+  },
+  -- { "titanzero/zephyrium" },
   { "Everblush/nvim" },
-  { "nvimdev/zephyr-nvim" },
+  -- {
+  -- "glepnir/zephyr-nvim",
+  -- requires = { "nvim-treesitter/nvim-treesitter", opt = true },
+  -- },
   { "projekt0n/github-nvim-theme" },
   {
     "EdenEast/nightfox.nvim",
@@ -236,6 +251,15 @@ return {
       })
     end,
   },
+  { "savq/melange-nvim" },
+  {
+    "AlexvZyl/nordic.nvim",
+    lazy = false,
+    config = function()
+      require("nordic").setup()
+    end,
+  },
+  { "lunarvim/horizon.nvim" },
   {
     "rose-pine/neovim",
     name = "rose-pine",
@@ -247,6 +271,7 @@ return {
       })
     end,
   },
+  { "sainnhe/gruvbox-material" },
   {
     "LazyVim/LazyVim",
     opts = {
@@ -255,7 +280,13 @@ return {
       -- colorscheme = "base16-tokyo-night-terminal-storm",
       -- colorscheme = "nord",
       -- colorscheme = "vscode",
-      colorscheme = "everforest",
+      -- colorscheme = "fleet",
+      -- colorscheme = "nordic",
+      -- colorscheme = "gruvbox-material",
+      colorscheme = "ayu-mirage",
+      -- colorscheme = "everforest",
+      -- colorscheme = "zephyr",
+      -- colorscheme = "citruszest",
       -- colorscheme = "tokyonight",
       -- colorscheme = "sonokai",
       -- colorscheme = "vscode_modern",
