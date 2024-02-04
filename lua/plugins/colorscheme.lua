@@ -369,7 +369,10 @@ return {
       -- colorscheme = "kanagawa",
       -- colorscheme = "visual_studio_code",
       -- colorscheme = "onedark",
-      colorscheme = "onedark_vivid",
+      -- colorscheme = "onedark_vivid",
+      -- colorscheme = "vn-night",
+      -- colorscheme = "melange",
+      colorscheme = "bamboo-vulgaris",
     },
   },
 }
