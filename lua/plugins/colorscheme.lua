@@ -1,19 +1,13 @@
 return {
 
-  {
-    "loctvl842/monokai-pro.nvim",
-    config = function()
-      require("monokai-pro").setup({
-        -- transparent_background = false,
-        -- background_clear = {
-        --   "float_win",
-        --   "toggleterm",
-        --   "notify",
-        --   "neo-tree",
-        -- },
-      })
-    end,
-  },
+  -- {
+  --   "loctvl842/monokai-pro.nvim",
+  --   config = function()
+  --     require("monokai-pro").setup({})
+  --   end,
+  -- },
+  { "NLKNguyen/papercolor-theme" },
+  -- { "https://gitlab.com/protesilaos/tempus-themes-vim.git" },
   {
     "uloco/bluloco.nvim",
     lazy = false,
@@ -169,24 +163,24 @@ return {
     -- },
   },
   -- { "flazz/vim-colorschemes" },
-  { "olimorris/onedarkpro.nvim" },
+  -- { "olimorris/onedarkpro.nvim" },
 
   -- WHICH ONEDARK DO I USE???
-  -- {
-  --   "navarasu/onedark.nvim",
-  --   lazy = false,
-  --   config = function()
-  --     require("onedark").setup({
-  --       -- style = "deep",
-  --       -- style = "cool",
-  --       -- style = "warm",
-  --       style = "dark",
-  --       -- style = "darker",
-  --       -- style = "warmer",
-  --     })
-  --   end,
-  -- },
-  -- { "sonph/onehalf" },
+  {
+    "navarasu/onedark.nvim",
+    lazy = false,
+    config = function()
+      require("onedark").setup({
+        -- style = "deep",
+        -- style = "cool",
+        -- style = "warm",
+        style = "dark",
+        -- style = "darker",
+        -- style = "warmer",
+      })
+    end,
+  },
+  -- -- { "sonph/onehalf" },
   { "tyrannicaltoucan/vim-deep-space" },
   -- { "rakr/vim-one" },
   { "mellow-theme/mellow.nvim" },
@@ -282,12 +276,12 @@ return {
     },
   },
   { "liuchengxu/space-vim-dark" },
-  {
-    "craftzdog/solarized-osaka.nvim",
-    lazy = false,
-    opts = {},
-  },
-  -- { "RRethy/nvim-base16" },
+  -- {
+  --   "craftzdog/solarized-osaka.nvim",
+  --   lazy = false,
+  --   opts = {},
+  -- },
+  { "RRethy/nvim-base16" },
   { "frenzyexists/aquarium-vim" },
   {
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
@@ -314,7 +308,7 @@ return {
   -- "glepnir/zephyr-nvim",
   -- requires = { "nvim-treesitter/nvim-treesitter", opt = true },
   -- },
-  -- { "projekt0n/github-nvim-theme" },
+  { "projekt0n/github-nvim-theme" },
   {
     "EdenEast/nightfox.nvim",
     config = function()
@@ -351,6 +345,7 @@ return {
     opts = {
       -- colorscheme = "monokai-pro-octagon",
       -- colorscheme = "monokai-pro-spectrum",
+      -- colorscheme = "monokai-pro-default",
       -- colorscheme = "base16-tokyo-night-terminal-storm",
       -- colorscheme = "nord",
       -- colorscheme = "vscode",
@@ -363,16 +358,20 @@ return {
       -- colorscheme = "zephyr",
       -- colorscheme = "citruszest",
       -- colorscheme = "tokyonight",
+      -- colorscheme = "tokyodark",
       -- colorscheme = "sonokai",
+      -- colorscheme = "duskfox",
+      -- colorscheme = "nightfox",
+      -- colorscheme = "nightfly",
       -- colorscheme = "vscode_modern",
       -- colorscheme = "edge",
       -- colorscheme = "kanagawa",
       -- colorscheme = "visual_studio_code",
       -- colorscheme = "onedark",
-      -- colorscheme = "onedark_vivid",
+      -- colorscheme = "one_monokai",
       -- colorscheme = "vn-night",
-      -- colorscheme = "melange",
-      colorscheme = "bamboo-vulgaris",
+      colorscheme = "melange",
+      -- colorscheme = "bamboo-vulgaris",
     },
   },
 }
