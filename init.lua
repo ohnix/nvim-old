@@ -3,7 +3,7 @@ require("config.lazy")
 -- experimental neovide config
 if vim.g.neovide then
   -- scale factor
-  -- vim.g.neovide_scale_factor = 0.8
+  vim.g.neovide_scale_factor = 1.0
 
   -- transparency
   -- Helper function for transparency formatting
