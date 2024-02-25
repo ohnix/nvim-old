@@ -107,7 +107,17 @@ return {
     -- end,
   },
   { "sainnhe/edge" },
-  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+  {
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly",
+    lazy = false,
+    priority = 1000,
+    -- config = function()
+    --   require("vim-moonfly-colors").setup({
+    --     vim.g.moonflyWinSeparator == 0,
+    --   })
+    -- end,
+  },
   { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
   {
     "olivercederborg/poimandres.nvim",
@@ -221,6 +231,9 @@ return {
         style = "dark",
         -- style = "darker",
         -- style = "warmer",
+        highlights = {
+          NeoTreeWinSeparator = { fg = "$bg0", bg = "$bg0" },
+        },
       })
     end,
   },
@@ -338,7 +351,14 @@ return {
       end,
     },
   },
-  { "Shatur/neovim-ayu" },
+  {
+    "Shatur/neovim-ayu",
+    config = function()
+      require("ayu").setup({
+        overrides = {},
+      })
+    end,
+  },
   {
     "xero/miasma.nvim",
     lazy = false,
@@ -389,16 +409,20 @@ return {
     opts = {
       -- colorscheme = "monokai-pro-octagon",
       -- colorscheme = "monokai-pro-spectrum",
+      -- colorscheme = "monokai-pro-octagon",
+      -- colorscheme = "monokai-pro-spectrum",
       -- colorscheme = "monokai-pro-default",
       -- colorscheme = "base16-tokyo-night-terminal-storm",
       -- colorscheme = "nord",
       -- colorscheme = "vscode",
+      -- colorscheme = "moonfly",
       -- colorscheme = "fleet",
       -- colorscheme = "nordic",
       -- colorscheme = "gruvbox-material",
       -- colorscheme = "ayu-mirage",
       -- colorscheme = "arctic",
-      colorscheme = "everforest",
+      -- colorscheme = "everforest",
+      -- colorscheme = "horizon",
       -- colorscheme = "zephyr",
       -- colorscheme = "citruszest",
       -- colorscheme = "tokyonight",
@@ -411,7 +435,7 @@ return {
       -- colorscheme = "edge",
       -- colorscheme = "kanagawa",
       -- colorscheme = "visual_studio_code",
-      -- colorscheme = "onedark",
+      colorscheme = "onedark",
       -- colorscheme = "rose-pine-moon",
       -- colorscheme = "one_monokai",
       -- colorscheme = "vn-night",
