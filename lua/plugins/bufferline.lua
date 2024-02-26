@@ -8,7 +8,7 @@ return {
           {
             filetype = "neo-tree",
             text = "File Tree",
-            highlight = "Directory",
+            -- highlight = "Directory",
             text_align = "left",
           },
         },
