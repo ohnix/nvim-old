@@ -6,7 +6,7 @@ return {
       require("monokai-pro").setup({
         transparent_background = false,
         terminal_colors = true,
-        devicons = false, -- highlight the icons of `nvim-web-devicons`
+        devicons = true, -- highlight the icons of `nvim-web-devicons`
         styles = {
           comment = { italic = true },
           keyword = { italic = true }, -- any other keyword
@@ -49,9 +49,6 @@ return {
       })
     end,
   },
-
-  { "NLKNguyen/papercolor-theme" },
-  -- { "https://gitlab.com/protesilaos/tempus-themes-vim.git" },
   {
     "uloco/bluloco.nvim",
     lazy = false,
@@ -87,11 +84,11 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy = false,
-    -- config = function()
-    --   require("catppuccin").setup({
-    --     transparent_background = true,
-    --   })
-    -- end,
+    config = function()
+      require("catppuccin").setup({
+        transparent_background = true,
+      })
+    end,
   },
   { "Yazeed1s/minimal.nvim" },
   {
@@ -139,7 +136,10 @@ return {
   {
     "maxmx03/fluoromachine.nvim",
     -- config = function()
-    --   local fm = require("fluoromachine")
+    --   require("fluoromachine").setup({
+    --     glow = true,
+    --   })
+    --   --   local fm = require("fluoromachine")
 
     -- fm.setup({
     --   glow = true,
@@ -149,7 +149,6 @@ return {
     -- vim.cmd.colorscheme("fluoromachine")
     -- end,
   },
-  { "dracula/vim" },
   { "luisiacc/gruvbox-baby" },
   {
     "mcchrish/zenbones.nvim",
@@ -162,16 +161,6 @@ return {
   { "JoosepAlviste/palenightfall.nvim" },
   { "drewtempelmeyer/palenight.vim" },
   { "sekke276/dark_flat.nvim" },
-  {
-    "rockyzhang24/arctic.nvim",
-    dependencies = { "rktjmp/lush.nvim" },
-    name = "arctic",
-    branch = "main",
-    priority = 1000,
-    config = function()
-      -- vim.cmd("colorscheme arctic")
-    end,
-  },
   {
     "nyngwang/nvimgelion",
     config = function()
@@ -195,30 +184,21 @@ return {
       })
     end,
   },
-  { "Mofiqul/vscode.nvim" },
-  {
-    "askfiy/visual_studio_code",
-    config = function()
-      -- vim.cmd([[colorscheme visual_studio_code]])
-    end,
-  },
   { "Mofiqul/adwaita.nvim" },
   { "nyoom-engineering/oxocarbon.nvim" },
   { "marko-cerovac/material.nvim" },
   {
     "folke/tokyonight.nvim",
     lazy = false,
-    -- opts = {
-    --   transparent = true,
-    --   styles = {
-    --     sidebars = "transparent",
-    --     floats = "transparent",
-    --   },
-    -- },
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
   },
-  -- { "flazz/vim-colorschemes" },
   -- { "olimorris/onedarkpro.nvim" },
-
   -- WHICH ONEDARK DO I USE???
   {
     "navarasu/onedark.nvim",
@@ -228,8 +208,8 @@ return {
         -- style = "deep",
         -- style = "cool",
         -- style = "warm",
-        style = "dark",
-        -- style = "darker",
+        -- style = "dark",
+        style = "darker",
         -- style = "warmer",
         highlights = {
           NeoTreeWinSeparator = { fg = "$bg0", bg = "$bg0" },
@@ -237,15 +217,10 @@ return {
       })
     end,
   },
-  -- -- { "sonph/onehalf" },
   { "tyrannicaltoucan/vim-deep-space" },
-  -- { "rakr/vim-one" },
   { "mellow-theme/mellow.nvim" },
-  { "NTBBloodbath/doom-one.nvim" },
   { "nxvu699134/vn-night.nvim" },
   { "sainnhe/everforest" },
-  { "lewpoly/sherbet.nvim" },
-  { "wuelnerdotexe/vim-enfocado" },
   { "yashguptaz/calvera-dark.nvim" },
   -- {
   --   "linrongbin16/colorbox.nvim",
@@ -291,7 +266,7 @@ return {
         -- color_set = "mellifluous",
         -- color_set = "alduin",
         -- color_set = "mountain",
-        color_set = "tender",
+        -- color_set = "tender",
 
         flat_background = {
           line_numbers = true,
@@ -311,19 +286,15 @@ return {
       })
     end,
   },
-  { "svrana/neosolarized.nvim" },
   {
-    "gmr458/vscode_modern_theme.nvim",
+    "craftzdog/solarized-osaka.nvim",
     lazy = false,
-    config = function()
-      require("vscode_modern").setup({
-        cursorline = true,
-        transparent_background = false,
-        nvim_tree_darker = true,
-      })
-      -- vim.cmd.colorscheme("vscode_modern")
-    end,
+    priority = 1000,
+    opts = {
+      transparent = true,
+    },
   },
+  { "svrana/neosolarized.nvim" },
   {
     "crispybaccoon/evergarden",
     opts = {
@@ -333,13 +304,8 @@ return {
     },
   },
   { "liuchengxu/space-vim-dark" },
-  -- {
-  --   "craftzdog/solarized-osaka.nvim",
-  --   lazy = false,
-  --   opts = {},
-  -- },
-  { "RRethy/nvim-base16" },
-  { "frenzyexists/aquarium-vim" },
+  -- { "RRethy/nvim-base16" },
+  { "Misterio77/base16-sakura-scheme" },
   {
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     {
@@ -366,12 +332,6 @@ return {
       -- vim.cmd("colorscheme miasma")
     end,
   },
-  -- { "titanzero/zephyrium" },
-  { "Everblush/nvim" },
-  -- {
-  -- "glepnir/zephyr-nvim",
-  -- requires = { "nvim-treesitter/nvim-treesitter", opt = true },
-  -- },
   { "projekt0n/github-nvim-theme" },
   {
     "EdenEast/nightfox.nvim",
@@ -407,6 +367,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
+      -- colorscheme = "material-darker",
+      -- colorscheme = "github_dark_default",
       -- colorscheme = "monokai-pro-octagon",
       -- colorscheme = "monokai-pro-spectrum",
       -- colorscheme = "monokai-pro-octagon",
@@ -416,18 +378,21 @@ return {
       -- colorscheme = "nord",
       -- colorscheme = "vscode",
       -- colorscheme = "moonfly",
-      -- colorscheme = "fleet",
+      colorscheme = "fleet",
       -- colorscheme = "nordic",
       -- colorscheme = "gruvbox-material",
       -- colorscheme = "ayu-mirage",
+      -- colorscheme = "solarized-osaka",
       -- colorscheme = "arctic",
       -- colorscheme = "everforest",
       -- colorscheme = "horizon",
+      -- colorscheme = "base16-katy",
       -- colorscheme = "zephyr",
       -- colorscheme = "citruszest",
       -- colorscheme = "tokyonight",
       -- colorscheme = "tokyodark",
       -- colorscheme = "sonokai",
+      -- colorscheme = "material-deep-ocean",
       -- colorscheme = "duskfox",
       -- colorscheme = "nightfox",
       -- colorscheme = "nightfly",
@@ -436,12 +401,14 @@ return {
       -- colorscheme = "kanagawa",
       -- colorscheme = "visual_studio_code",
       -- colorscheme = "onedark",
-      colorscheme = "catppuccin-mocha",
+      -- colorscheme = "moonlight",
+      -- colorscheme = "catppuccin-mocha",
       -- colorscheme = "rose-pine-moon",
       -- colorscheme = "one_monokai",
       -- colorscheme = "vn-night",
       -- colorscheme = "melange",
       -- colorscheme = "bamboo-vulgaris",
+      -- colorscheme = "mellow",
     },
   },
 }

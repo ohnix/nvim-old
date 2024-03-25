@@ -3,7 +3,7 @@ return {
     "akinsho/bufferline.nvim",
     opts = {
       options = {
-        separator_style = "slant",
+        -- separator_style = "slant",
         offsets = {
           {
             filetype = "neo-tree",
