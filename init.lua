@@ -5,6 +5,9 @@ require("config.lazy")
 vim.g.moonflyWinSeparator = 0
 vim.g.nightflyWinSeparator = 0
 
+--sonokai
+-- vim.g.sonokai_style = "andromeda"
+
 --neovide config
 if vim.g.neovide then
   vim.o.guifont = "Fira Code:h12"

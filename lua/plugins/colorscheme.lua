@@ -1,5 +1,7 @@
 return {
 
+  { "loctvl842/monokai-pro.nvim" },
+
   {
     "uloco/bluloco.nvim",
     lazy = false,
@@ -8,18 +10,18 @@ return {
       -- your optional config goes here, see below.
     end,
   },
-  {
-    "felipeagc/fleet-theme-nvim",
-  },
+
+  { "felipeagc/fleet-theme-nvim" },
   { "voidekh/kyotonight.vim" },
   { "dasupradyumna/midnight.nvim", lazy = false, priority = 1000 },
   { "ellisonleao/gruvbox.nvim" },
-  { "tomasiser/vim-code-dark" },
+
   {
     "HoNamDuong/hybrid.nvim",
     lazy = false,
     opts = {},
   },
+
   {
     "tiagovla/tokyodark.nvim",
     opts = {
@@ -30,7 +32,9 @@ return {
       -- vim.cmd([[colorscheme tokyodark]])
     end,
   },
+
   { "shaunsingh/nord.nvim" },
+
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -41,20 +45,17 @@ return {
       })
     end,
   },
+
   { "Yazeed1s/minimal.nvim" },
+
   {
     "antonyz89/electron-vue.nvim",
     dependencies = { "rktjmp/lush.nvim" },
   },
-  {
-    "sainnhe/sonokai",
-    -- config = function()
-    --   require("sonokai").setup({
-    --     style = "atlantis",
-    --   })
-    -- end,
-  },
+
+  { "sainnhe/sonokai" },
   { "sainnhe/edge" },
+
   {
     "bluz71/vim-moonfly-colors",
     name = "moonfly",
@@ -66,7 +67,9 @@ return {
     --   })
     -- end,
   },
+
   { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
+
   {
     "olivercederborg/poimandres.nvim",
     lazy = false,
@@ -78,12 +81,14 @@ return {
       })
     end,
   },
+
   {
     "zootedb0t/citruszest.nvim",
     lazy = false,
   },
-  { "cpea2506/one_monokai.nvim" },
+
   { "shaunsingh/moonlight.nvim" },
+
   {
     "maxmx03/fluoromachine.nvim",
     -- config = function()
@@ -100,7 +105,9 @@ return {
     -- vim.cmd.colorscheme("fluoromachine")
     -- end,
   },
+
   { "luisiacc/gruvbox-baby" },
+
   {
     "mcchrish/zenbones.nvim",
     -- Optionally install Lush. Allows for more configuration or extending the colorscheme
@@ -108,16 +115,19 @@ return {
     -- In Vim, compat mode is turned on as Lush only works in Neovim.
     requires = "rktjmp/lush.nvim",
   },
+
   { "projekt0n/caret.nvim" },
   { "JoosepAlviste/palenightfall.nvim" },
   { "drewtempelmeyer/palenight.vim" },
   { "sekke276/dark_flat.nvim" },
+
   {
     "nyngwang/nvimgelion",
     config = function()
       -- do whatever you want for further customization~
     end,
   },
+
   {
     "rebelot/kanagawa.nvim",
     config = function()
@@ -135,9 +145,11 @@ return {
       })
     end,
   },
+
   { "Mofiqul/adwaita.nvim" },
   { "nyoom-engineering/oxocarbon.nvim" },
   { "marko-cerovac/material.nvim" },
+
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -149,17 +161,18 @@ return {
       },
     },
   },
+
   -- { "olimorris/onedarkpro.nvim" },
   -- WHICH ONEDARK DO I USE???
+
   {
     "navarasu/onedark.nvim",
-    lazy = false,
     config = function()
       require("onedark").setup({
-        -- style = "deep",
+        style = "deep",
         -- style = "cool",
         -- style = "warm",
-        style = "dark",
+        -- style = "dark",
         -- style = "darker",
         -- style = "warmer",
         highlights = {
@@ -168,11 +181,13 @@ return {
       })
     end,
   },
+
   { "tyrannicaltoucan/vim-deep-space" },
   { "mellow-theme/mellow.nvim" },
   { "nxvu699134/vn-night.nvim" },
   { "sainnhe/everforest" },
   { "yashguptaz/calvera-dark.nvim" },
+
   -- {
   --   "linrongbin16/colorbox.nvim",
   --   -- don't lazy load
@@ -196,6 +211,7 @@ return {
   --     })
   --   end,
   -- },
+
   {
     "scottmckendry/cyberdream.nvim",
     lazy = false,
@@ -210,6 +226,7 @@ return {
       })
     end,
   },
+
   {
     "ramojus/mellifluous.nvim",
     config = function()
@@ -228,6 +245,7 @@ return {
       }) -- optional, see configuration section.
     end,
   },
+
   {
     "ribru17/bamboo.nvim",
     lazy = false,
@@ -237,6 +255,7 @@ return {
       })
     end,
   },
+
   {
     "craftzdog/solarized-osaka.nvim",
     lazy = false,
@@ -245,7 +264,7 @@ return {
       transparent = true,
     },
   },
-  { "svrana/neosolarized.nvim" },
+
   {
     "crispybaccoon/evergarden",
     opts = {
@@ -254,25 +273,18 @@ return {
       overrides = {}, -- add custom overrides
     },
   },
-  { "liuchengxu/space-vim-dark" },
+
+  { "oxfist/night-owl.nvim" },
+
   {
     "rockyzhang24/arctic.nvim",
     branch = "v2",
     dependencies = { "rktjmp/lush.nvim" },
   },
-  { "RRethy/nvim-base16" },
-  { "Misterio77/base16-sakura-scheme" },
-  {
-    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-    {
-      "baliestri/aura-theme",
-      lazy = false,
-      config = function(plugin)
-        vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
-        -- vim.cmd([[colorscheme aura-dark]])
-      end,
-    },
-  },
+
+  -- { "RRethy/nvim-base16" },
+  { "cryptomilk/nightcity.nvim", version = false },
+
   {
     "Shatur/neovim-ayu",
     config = function()
@@ -281,6 +293,7 @@ return {
       })
     end,
   },
+
   {
     "xero/miasma.nvim",
     lazy = false,
@@ -288,7 +301,9 @@ return {
       -- vim.cmd("colorscheme miasma")
     end,
   },
+
   { "projekt0n/github-nvim-theme" },
+
   {
     "EdenEast/nightfox.nvim",
     config = function()
@@ -299,7 +314,9 @@ return {
       })
     end,
   },
+
   { "savq/melange-nvim" },
+
   {
     "AlexvZyl/nordic.nvim",
     lazy = false,
@@ -307,7 +324,9 @@ return {
       require("nordic").setup()
     end,
   },
+
   { "lunarvim/horizon.nvim" },
+
   {
     "rose-pine/neovim",
     name = "rose-pine",
@@ -319,7 +338,9 @@ return {
       })
     end,
   },
+
   { "sainnhe/gruvbox-material" },
+
   {
     "LazyVim/LazyVim",
     opts = {
@@ -339,16 +360,23 @@ return {
       -- colorscheme = "nordic",
       -- colorscheme = "gruvbox-material",
       -- colorscheme = "ayu-mirage",
-      colorscheme = "solarized-osaka",
+      -- colorscheme = "onedark",
+      -- colorscheme = "solarized-osaka",
+      -- colorscheme = "base16-katy",
       -- colorscheme = "arctic",
       -- colorscheme = "everforest",
       -- colorscheme = "horizon",
       -- colorscheme = "base16-katy",
+      -- colorscheme = "carbonfox",
+      -- colorscheme = "nightfox",
+      -- colorscheme = "duskfox",
+      -- colorscheme = "terafox",
       -- colorscheme = "zephyr",
       -- colorscheme = "citruszest",
       -- colorscheme = "tokyonight",
       -- colorscheme = "tokyodark",
       -- colorscheme = "sonokai",
+      -- colorscheme = "randomhue",
       -- colorscheme = "material-deep-ocean",
       -- colorscheme = "duskfox",
       -- colorscheme = "nightfox",
@@ -357,7 +385,7 @@ return {
       -- colorscheme = "edge",
       -- colorscheme = "kanagawa",
       -- colorscheme = "visual_studio_code",
-      -- colorscheme = "onedark",
+      colorscheme = "onedark",
       -- colorscheme = "moonlight",
       -- colorscheme = "catppuccin-mocha",
       -- colorscheme = "rose-pine-moon",
