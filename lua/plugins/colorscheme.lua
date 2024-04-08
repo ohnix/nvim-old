@@ -120,6 +120,8 @@ return {
   { "JoosepAlviste/palenightfall.nvim" },
   { "drewtempelmeyer/palenight.vim" },
   { "sekke276/dark_flat.nvim" },
+  { "NTBBloodbath/sweetie.nvim" },
+  { "samharju/synthweave.nvim" },
 
   {
     "nyngwang/nvimgelion",
@@ -169,11 +171,11 @@ return {
     "navarasu/onedark.nvim",
     config = function()
       require("onedark").setup({
-        style = "deep",
+        -- style = "deep",
         -- style = "cool",
         -- style = "warm",
         -- style = "dark",
-        -- style = "darker",
+        style = "darker",
         -- style = "warmer",
         highlights = {
           NeoTreeWinSeparator = { fg = "$bg0", bg = "$bg0" },
@@ -182,11 +184,17 @@ return {
     end,
   },
 
+  { "theniceboy/nvim-deus" },
+  { "xStormyy/bearded-theme.nvim" },
   { "tyrannicaltoucan/vim-deep-space" },
   { "mellow-theme/mellow.nvim" },
   { "nxvu699134/vn-night.nvim" },
   { "sainnhe/everforest" },
   { "yashguptaz/calvera-dark.nvim" },
+  { "rockerBOO/boo-colorscheme-nvim" },
+  { "AhmedAbdulrahman/aylin.vim" },
+  { "Yazeed1s/oh-lucy.nvim" },
+  { "water-sucks/darkrose.nvim" },
 
   -- {
   --   "linrongbin16/colorbox.nvim",
@@ -315,6 +323,13 @@ return {
     end,
   },
 
+  {
+    "eldritch-theme/eldritch.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+
   { "savq/melange-nvim" },
 
   {
@@ -364,6 +379,7 @@ return {
       -- colorscheme = "solarized-osaka",
       -- colorscheme = "base16-katy",
       -- colorscheme = "arctic",
+      colorscheme = "oxocarbon",
       -- colorscheme = "everforest",
       -- colorscheme = "horizon",
       -- colorscheme = "base16-katy",
@@ -385,7 +401,7 @@ return {
       -- colorscheme = "edge",
       -- colorscheme = "kanagawa",
       -- colorscheme = "visual_studio_code",
-      colorscheme = "onedark",
+      -- colorscheme = "onedark",
       -- colorscheme = "moonlight",
       -- colorscheme = "catppuccin-mocha",
       -- colorscheme = "rose-pine-moon",

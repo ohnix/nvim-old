@@ -1,14 +1,17 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
---moonfly borderless
+-- moonfly borderless
 vim.g.moonflyWinSeparator = 0
 vim.g.nightflyWinSeparator = 0
 
---sonokai
--- vim.g.sonokai_style = "andromeda"
+-- sonokai
+vim.g.sonokai_style = "andromeda"
 
---neovide config
+-- adwaita
+vim.g.adwaita_darker = true
+
+-- neovide config
 if vim.g.neovide then
   vim.o.guifont = "Fira Code:h12"
   -- scale factor
