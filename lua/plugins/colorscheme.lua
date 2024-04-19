@@ -1,10 +1,9 @@
 return {
 
-  { "loctvl842/monokai-pro.nvim" },
+  { "loctvl842/monokai-pro.nvim", lazy = false },
 
   {
     "uloco/bluloco.nvim",
-    lazy = false,
     dependencies = { "rktjmp/lush.nvim" },
     config = function()
       -- your optional config goes here, see below.
@@ -18,7 +17,6 @@ return {
 
   {
     "HoNamDuong/hybrid.nvim",
-    lazy = false,
     opts = {},
   },
 
@@ -59,7 +57,6 @@ return {
   {
     "bluz71/vim-moonfly-colors",
     name = "moonfly",
-    lazy = false,
     priority = 1000,
     -- config = function()
     --   require("vim-moonfly-colors").setup({
@@ -72,7 +69,6 @@ return {
 
   {
     "olivercederborg/poimandres.nvim",
-    lazy = false,
     config = function()
       require("poimandres").setup({
         -- leave this setup function empty for default config
@@ -82,10 +78,7 @@ return {
     end,
   },
 
-  {
-    "zootedb0t/citruszest.nvim",
-    lazy = false,
-  },
+  { "zootedb0t/citruszest.nvim" },
 
   { "shaunsingh/moonlight.nvim" },
 
@@ -222,7 +215,6 @@ return {
 
   {
     "scottmckendry/cyberdream.nvim",
-    lazy = false,
     priority = 1000,
     config = function()
       require("cyberdream").setup({
@@ -256,7 +248,6 @@ return {
 
   {
     "ribru17/bamboo.nvim",
-    lazy = false,
     config = function()
       require("bamboo").setup({
         -- optional configuration here
@@ -266,7 +257,6 @@ return {
 
   {
     "craftzdog/solarized-osaka.nvim",
-    lazy = false,
     priority = 1000,
     opts = {
       transparent = true,
@@ -304,7 +294,6 @@ return {
 
   {
     "xero/miasma.nvim",
-    lazy = false,
     config = function()
       -- vim.cmd("colorscheme miasma")
     end,
@@ -325,7 +314,6 @@ return {
 
   {
     "eldritch-theme/eldritch.nvim",
-    lazy = false,
     priority = 1000,
     opts = {},
   },
@@ -334,7 +322,6 @@ return {
 
   {
     "AlexvZyl/nordic.nvim",
-    lazy = false,
     config = function()
       require("nordic").setup()
     end,
