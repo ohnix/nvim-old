@@ -1,6 +1,6 @@
 return {
 
-  { "loctvl842/monokai-pro.nvim", lazy = false },
+  -- { "loctvl842/monokai-pro.nvim", lazy = false },
 
   {
     "uloco/bluloco.nvim",
@@ -259,7 +259,7 @@ return {
     "craftzdog/solarized-osaka.nvim",
     priority = 1000,
     opts = {
-      transparent = true,
+      transparent = false,
     },
   },
 
@@ -281,7 +281,17 @@ return {
   },
 
   -- { "RRethy/nvim-base16" },
-  { "cryptomilk/nightcity.nvim", version = false },
+  {
+    "cryptomilk/nightcity.nvim",
+    version = false,
+    config = function()
+      require("nightcity").setup({
+        on_highlights = function(groups, c)
+          groups.String = { fg = c.lightyellow, bg = c.none }
+        end,
+      })
+    end,
+  },
 
   {
     "Shatur/neovim-ayu",
@@ -366,7 +376,8 @@ return {
       -- colorscheme = "solarized-osaka",
       -- colorscheme = "base16-katy",
       -- colorscheme = "arctic",
-      colorscheme = "oxocarbon",
+      -- colorscheme = "oxocarbon",
+      colorscheme = "nightcity-afterlife",
       -- colorscheme = "everforest",
       -- colorscheme = "horizon",
       -- colorscheme = "base16-katy",
