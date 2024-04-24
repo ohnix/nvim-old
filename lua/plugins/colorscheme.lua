@@ -1,6 +1,12 @@
 return {
 
-  -- { "loctvl842/monokai-pro.nvim", lazy = false },
+  {
+    "loctvl842/monokai-pro.nvim",
+    lazy = false,
+    config = function()
+      require("monokai-pro").setup({})
+    end,
+  },
 
   {
     "uloco/bluloco.nvim",
@@ -164,11 +170,11 @@ return {
     "navarasu/onedark.nvim",
     config = function()
       require("onedark").setup({
-        -- style = "deep",
+        style = "deep",
         -- style = "cool",
         -- style = "warm",
         -- style = "dark",
-        style = "darker",
+        -- style = "darker",
         -- style = "warmer",
         highlights = {
           NeoTreeWinSeparator = { fg = "$bg0", bg = "$bg0" },
@@ -177,6 +183,7 @@ return {
     end,
   },
 
+  { "tanvirtin/monokai.nvim" },
   { "theniceboy/nvim-deus" },
   { "xStormyy/bearded-theme.nvim" },
   { "tyrannicaltoucan/vim-deep-space" },
@@ -259,7 +266,7 @@ return {
     "craftzdog/solarized-osaka.nvim",
     priority = 1000,
     opts = {
-      transparent = false,
+      transparent = true,
     },
   },
 
@@ -273,6 +280,11 @@ return {
   },
 
   { "oxfist/night-owl.nvim" },
+  {
+    "embark-theme/vim",
+    as = "embark",
+    config = function() end,
+  },
 
   {
     "rockyzhang24/arctic.nvim",
@@ -288,6 +300,7 @@ return {
       require("nightcity").setup({
         on_highlights = function(groups, c)
           groups.String = { fg = c.lightyellow, bg = c.none }
+          groups.WinSeparator = { fg = c.bg, bg = c.bg }
         end,
       })
     end,
