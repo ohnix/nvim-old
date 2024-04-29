@@ -45,7 +45,7 @@ return {
     lazy = false,
     config = function()
       require("catppuccin").setup({
-        -- transparent_background = true,
+        transparent_background = true,
       })
     end,
   },
@@ -155,7 +155,7 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     opts = {
-      -- transparent = true,
+      transparent = true,
       styles = {
         -- sidebars = "transparent",
         -- floats = "transparent",
@@ -170,17 +170,23 @@ return {
     "navarasu/onedark.nvim",
     config = function()
       require("onedark").setup({
-        style = "deep",
+        -- style = "deep",
         -- style = "cool",
         -- style = "warm",
         -- style = "dark",
-        -- style = "darker",
+        style = "darker",
         -- style = "warmer",
         highlights = {
           NeoTreeWinSeparator = { fg = "$bg0", bg = "$bg0" },
         },
       })
     end,
+  },
+
+  {
+    "polirritmico/monokai-nightasty.nvim",
+    lazy = false,
+    priority = 1000,
   },
 
   { "tanvirtin/monokai.nvim" },
@@ -386,11 +392,11 @@ return {
       -- colorscheme = "gruvbox-material",
       -- colorscheme = "ayu-mirage",
       -- colorscheme = "onedark",
-      -- colorscheme = "solarized-osaka",
+      colorscheme = "solarized-osaka",
       -- colorscheme = "base16-katy",
       -- colorscheme = "arctic",
       -- colorscheme = "oxocarbon",
-      colorscheme = "nightcity-afterlife",
+      -- colorscheme = "nightcity-afterlife",
       -- colorscheme = "everforest",
       -- colorscheme = "horizon",
       -- colorscheme = "base16-katy",
