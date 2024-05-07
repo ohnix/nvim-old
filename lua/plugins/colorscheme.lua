@@ -1,12 +1,12 @@
 return {
 
-  {
-    "loctvl842/monokai-pro.nvim",
-    lazy = false,
-    config = function()
-      require("monokai-pro").setup({})
-    end,
-  },
+  -- {
+  --   "loctvl842/monokai-pro.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("monokai-pro").setup({})
+  --   end,
+  -- },
 
   {
     "uloco/bluloco.nvim",
@@ -45,7 +45,7 @@ return {
     lazy = false,
     config = function()
       require("catppuccin").setup({
-        transparent_background = true,
+        -- transparent_background = true,
       })
     end,
   },
@@ -88,22 +88,7 @@ return {
 
   { "shaunsingh/moonlight.nvim" },
 
-  {
-    "maxmx03/fluoromachine.nvim",
-    -- config = function()
-    --   require("fluoromachine").setup({
-    --     glow = true,
-    --   })
-    --   --   local fm = require("fluoromachine")
-
-    -- fm.setup({
-    --   glow = true,
-    -- theme = "fluoromachine",
-    -- })
-
-    -- vim.cmd.colorscheme("fluoromachine")
-    -- end,
-  },
+  { "maxmx03/fluoromachine.nvim" },
 
   { "luisiacc/gruvbox-baby" },
 
@@ -155,7 +140,7 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     opts = {
-      transparent = true,
+      -- transparent = true,
       styles = {
         -- sidebars = "transparent",
         -- floats = "transparent",
@@ -173,11 +158,70 @@ return {
         -- style = "deep",
         -- style = "cool",
         -- style = "warm",
+        style = "warmer",
         -- style = "dark",
-        style = "darker",
-        -- style = "warmer",
+        -- style = "darker",
+        colors = {
+          -- darker = {
+          --   black = "#0e1013",
+          --   bg0 = "#1f2329",
+          --   bg1 = "#282c34",
+          --   bg2 = "#30363f",
+          --   bg3 = "#323641",
+          --   bg_d = "#181b20",
+          --   bg_blue = "#61afef",
+          --   bg_yellow = "#e8c88c",
+          --   fg = "#a0a8b7",
+          --   purple = "#bf68d9",
+          --   green = "#8ebd6b",
+          --   orange = "#cc9057",
+          --   blue = "#4fa6ed",
+          --   yellow = "#e2b86b",
+          --   cyan = "#48b0bd",
+          --   red = "#e55561",
+          --   grey = "#535965",
+          light_grey = "#7a818e",
+          --   dark_cyan = "#266269",
+          --   dark_red = "#8b3434",
+          --   dark_yellow = "#835d1a",
+          --   dark_purple = "#7e3992",
+          --   diff_add = "#272e23",
+          --   diff_delete = "#2d2223",
+          --   diff_change = "#172a3a",
+          --   diff_text = "#274964",
+          --   },
+          --   deep = {
+          --     black = "#0c0e15",
+          --     bg0 = "#1a212e",
+          --     bg1 = "#21283b",
+          --     bg2 = "#283347",
+          --     bg3 = "#2a324a",
+          --     bg_d = "#141b24",
+          -- bg_blue = "#54b0fd",
+          -- bg_yellow = "#f2cc81",
+          -- fg = "#93a4c3",
+          purple = "#c75ae8",
+          green = "#8bcd5b",
+          orange = "#dd9046",
+          blue = "#41a7fc",
+          yellow = "#efbd5d",
+          cyan = "#34bfd0",
+          red = "#f65866",
+          -- grey = "#455574",
+          -- light_grey = "#6c7d9c",
+          dark_cyan = "#1b6a73",
+          dark_red = "#992525",
+          dark_yellow = "#8f610d",
+          dark_purple = "#862aa1",
+          diff_add = "#27341c",
+          diff_delete = "#331c1e",
+          diff_change = "#102b40",
+          diff_text = "#1c4a6e",
+          --   },
+        },
         highlights = {
           NeoTreeWinSeparator = { fg = "$bg0", bg = "$bg0" },
+          ["@tag.delimiter"] = { fg = "$light_grey" },
         },
       })
     end,
@@ -201,6 +245,7 @@ return {
   { "AhmedAbdulrahman/aylin.vim" },
   { "Yazeed1s/oh-lucy.nvim" },
   { "water-sucks/darkrose.nvim" },
+  { "Everblush/nvim", name = "everblush" },
 
   -- {
   --   "linrongbin16/colorbox.nvim",
@@ -244,10 +289,15 @@ return {
     "ramojus/mellifluous.nvim",
     config = function()
       require("mellifluous").setup({ --[[...]]
-        -- color_set = "mellifluous",
+        color_set = "mellifluous",
         -- color_set = "alduin",
         -- color_set = "mountain",
         -- color_set = "tender",
+
+        mellifluous = {
+          neutral = true,
+          bg_contrast = "hard",
+        },
 
         flat_background = {
           line_numbers = true,
@@ -272,7 +322,7 @@ return {
     "craftzdog/solarized-osaka.nvim",
     priority = 1000,
     opts = {
-      transparent = true,
+      transparent = false,
     },
   },
 
@@ -391,8 +441,8 @@ return {
       -- colorscheme = "nordic",
       -- colorscheme = "gruvbox-material",
       -- colorscheme = "ayu-mirage",
-      -- colorscheme = "onedark",
-      colorscheme = "solarized-osaka",
+      colorscheme = "onedark",
+      -- colorscheme = "solarized-osaka",
       -- colorscheme = "base16-katy",
       -- colorscheme = "arctic",
       -- colorscheme = "oxocarbon",
