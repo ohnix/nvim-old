@@ -148,6 +148,12 @@ return {
     },
   },
 
+  { "sontungexpt/witch", priority = 1000 },
+
+  {
+    "ptdewey/darkearth-nvim",
+  },
+
   -- { "olimorris/onedarkpro.nvim" },
   -- WHICH ONEDARK DO I USE???
 
@@ -161,6 +167,7 @@ return {
         style = "warmer",
         -- style = "dark",
         -- style = "darker",
+        -- transparent = true,
         colors = {
           -- darker = {
           --   black = "#0e1013",
@@ -180,7 +187,7 @@ return {
           --   cyan = "#48b0bd",
           --   red = "#e55561",
           --   grey = "#535965",
-          light_grey = "#7a818e",
+          -- light_grey = "#7a818e",
           --   dark_cyan = "#266269",
           --   dark_red = "#8b3434",
           --   dark_yellow = "#835d1a",
@@ -208,7 +215,7 @@ return {
           cyan = "#34bfd0",
           red = "#f65866",
           -- grey = "#455574",
-          -- light_grey = "#6c7d9c",
+          light_grey_deep = "#6c7d9c",
           dark_cyan = "#1b6a73",
           dark_red = "#992525",
           dark_yellow = "#8f610d",
@@ -221,7 +228,7 @@ return {
         },
         highlights = {
           NeoTreeWinSeparator = { fg = "$bg0", bg = "$bg0" },
-          ["@tag.delimiter"] = { fg = "$light_grey" },
+          ["@tag.delimiter"] = { fg = "$light_grey_deep" },
         },
       })
     end,
@@ -245,7 +252,17 @@ return {
   { "AhmedAbdulrahman/aylin.vim" },
   { "Yazeed1s/oh-lucy.nvim" },
   { "water-sucks/darkrose.nvim" },
-  { "Everblush/nvim", name = "everblush" },
+  {
+    "Everblush/nvim",
+    name = "everblush",
+    config = function()
+      require("everblush").setup({
+        override = {},
+      })
+    end,
+  },
+  -- { "Biscuit-Theme/biscuit" },
+  { "Biscuit-Theme/nvim" },
 
   -- {
   --   "linrongbin16/colorbox.nvim",
@@ -336,6 +353,7 @@ return {
   },
 
   { "oxfist/night-owl.nvim" },
+
   {
     "embark-theme/vim",
     as = "embark",
@@ -436,12 +454,13 @@ return {
       -- colorscheme = "nord",
       -- colorscheme = "vscode",
       -- colorscheme = "moonfly",
-      -- colorscheme = "fleet",
+      colorscheme = "fleet",
       -- colorscheme = "tokyonight-night",
       -- colorscheme = "nordic",
       -- colorscheme = "gruvbox-material",
       -- colorscheme = "ayu-mirage",
-      colorscheme = "onedark",
+      -- colorscheme = "onedark",
+      -- colorscheme = "witch",
       -- colorscheme = "solarized-osaka",
       -- colorscheme = "base16-katy",
       -- colorscheme = "arctic",
@@ -468,7 +487,6 @@ return {
       -- colorscheme = "edge",
       -- colorscheme = "kanagawa",
       -- colorscheme = "visual_studio_code",
-      -- colorscheme = "onedark",
       -- colorscheme = "moonlight",
       -- colorscheme = "catppuccin-mocha",
       -- colorscheme = "rose-pine-moon",
